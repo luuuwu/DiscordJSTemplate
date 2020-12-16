@@ -11,7 +11,7 @@ module.exports = {
                 return message.reply('you need to tag a user in order to kick them!');
             }
             const taggedUser = message.mentions.members.first();
-            if (taggedUser.hasPermission(['MANAGE_MESSAGES']))
+            if (taggedUser.hasPermission(['KICK_MEMBERS']))
             {
                 message.channel.send(taggedUser.displayName + ` can't be kicked`);  
             }
